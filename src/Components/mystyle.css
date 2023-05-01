@@ -1,0 +1,63 @@
+.App{
+    margin-top: 0%;
+    background-image: linear-gradient(aqua,rgb(187, 93, 93),white);
+    width: 100%;
+    height: 712px;
+    
+    
+}
+.heading{
+    position: absolute;
+    left: 450px;
+    text-shadow: 5px 5px 5px rgb(0, 136, 255) ;
+}
+.container{
+    display: flex;
+    flex-direction: row;
+    gap: 150px;
+    position: absolute;
+    left: 480px;
+    top: 150px;
+}
+.item{
+    height: 70px;
+    width: 250px;
+    background-color: aquamarine;
+    border-radius: 400px;
+
+}
+/* .output{
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    top: 250px;
+    left: 100px;
+    gap: 200px;
+
+    
+} */
+.cardC{
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 500px;
+    background-color: rgb(0, 166, 255);
+    border-radius: 15px;
+    position: absolute;
+    top: 300px;
+    left: 450px;
+    padding-left: 10px;
+
+}
+.cardf{
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 500px;
+    background-color: rgb(0, 208, 255);
+    border-radius: 15px;
+    position: absolute;
+    top: 300px;
+    left: -300px;
+    padding-left: 10px;
+
+
+}

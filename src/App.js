@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import Reat, { Component } from "react";
+import MyfunctionalComponent from "./Components/MyFunctionalComponents";
+import MyClassComponent from "./Components/MyClassComponents";
+import "./Components/mystyle.css";
+import { render } from "@testing-library/react";
 
-function App() {
+export class App extends Component{
+  constructor(props){
+  super(props);
+  this.state = {
+    showfunction : true,
+    showclass : true,
+    
+  };
+}
+ toggleFuncomp = () => {
+       this.setState((prevState) => ({
+           showfunction: !prevState.showfunction,
+       }));
+};
+toggleClasscomp = () => {
+  this.setState((prevState) => ({
+      showclass: !prevState.showclass,
+  }));
+};
+render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <h1 className="heading"> Styling Using Functional and Class Component </h1>
+    <div className="container">
+      <button className="item" style={{backgroundColor:"aqua"}} onClick={this.toggleFuncomp}>To see styling in funcional Component</button>
+      <button className="item" onClick={this.toggleClasscomp}>To see styling in class Component</button>
+      
+      {this.state.showfunction && <MyfunctionalComponent/>}
+      {this.state.showclass && <MyClassComponent/>}
+   </div>
+   
+  </div>
   );
+}
 }
 
 export default App;
